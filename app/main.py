@@ -141,7 +141,7 @@ notebook = utils.to_notebook(notebook_code)
 # Display donwload/open buttons.
 # TODO: Maybe refactor this (with some of the stuff in utils.py) to buttons.py.
 st.write("")  # add vertical space
-col1, col2, col3 = st.beta_columns(3)
+col1, col2, col3 = st.columns(3)
 open_colab = col1.button("🚀 Open in Colab")  # logic handled further down
 with col2:
     utils.download_button(code, "generated-code.py", "🐍 Download (.py)")
