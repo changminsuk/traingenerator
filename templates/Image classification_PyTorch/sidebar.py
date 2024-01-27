@@ -6,6 +6,19 @@ import streamlit as st
 # option 1: model -> code
 # option 2 – if model has multiple variants: model -> model variant -> code
 MODELS = {
+    # FROM 'guochengqian/openpoints' repo...
+    "Baafnet": "baafnet",
+    "Ball_dgcnn": "ball_dgcnn",
+    "CurveNet": "curvenet",
+    "Debub_invvt": "debub_invvt",
+    "Deepgcn": "deepgcn",
+    "Dgcnn": "dgcnn",
+    "Graphvit3d": "graphvit3d",
+    "Grouppointnet": "grouppointnet",
+    "Pct": "pct",
+    "Pointmlp": "pointmlp",
+
+    # DEFAULTS
     "AlexNet": "alexnet",  # single model variant
     "ResNet": {  # multiple model variants
         "ResNet 18": "resnet18",
