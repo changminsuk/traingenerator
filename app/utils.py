@@ -1,3 +1,5 @@
+import os
+
 import streamlit as st
 import pickle
 import pandas as pd
@@ -71,7 +73,7 @@ def open_link(url, new_tab=True):
 
 
 def download_button(
-    object_to_download, download_filename, button_text  # , pickle_it=False
+        object_to_download, download_filename, button_text  # , pickle_it=False
 ):
     """
     Generates a link to download the given object_to_download.
@@ -153,8 +155,8 @@ def download_button(
         </style> """
 
     dl_link = (
-        custom_css
-        + f'<a download="{download_filename}" id="{button_id}" href="data:file/txt;base64,{b64}">{button_text}</a><br><br>'
+            custom_css
+            + f'<a download="{download_filename}" id="{button_id}" href="data:file/txt;base64,{b64}">{button_text}</a><br><br>'
     )
     # dl_link = f'<a download="{download_filename}" id="{button_id}" href="data:file/txt;base64,{b64}"><input type="button" kind="primary" value="{button_text}"></a><br></br>'
 
@@ -173,4 +175,3 @@ def download_button(
 #         f'<a href="data:{mimetype};base64,{b64}" download="{filename}">{label}</a>'
 #     )
 #     return href
-

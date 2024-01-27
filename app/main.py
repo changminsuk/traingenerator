@@ -17,7 +17,10 @@ import utils
 
 MAGE_EMOJI_URL = "https://symbl-world.akamaized.net/i/webp/5f/643cfb26a7a37a8d1aef71619b0d10.webp"
 st.set_page_config(
-    page_title="Traingenerator", page_icon=MAGE_EMOJI_URL,
+    page_title="LiDCLS-Species-Classification",
+    page_icon=MAGE_EMOJI_URL,
+    layout="wide",
+    initial_sidebar_state="expanded",
 )
 
 # Set up github access for "Open in Colab" button.
