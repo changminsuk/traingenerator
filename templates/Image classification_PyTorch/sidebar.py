@@ -167,7 +167,7 @@ def show():
         st.write("## Mode")
         inputs["mode"] = st.selectbox(
             "Select mode",
-            ("Train", "Test"),
+            ("Train", "Predict"),
         )
         if inputs["mode"] == "Train":
             validation_accuracy = st.slider("Validation accuracy", 0.0, 1.0, 0.0)
@@ -182,9 +182,15 @@ def show():
 
         if submit_btn:
             print(inputs)
-            # TODO: Train/Test 실행
-            # uuid 로 이름을 지정해서 ML model 에 전달
-            # ex) uploaded_data.name = str(uuid.uuid4()) + ".zip"
+            # TODO: build model
+            # TODO: uuid 로 이름을 지정해서 ML model 에 전달
+            # TODO: ex) uploaded_data.name = str(uuid.uuid4()) + ".zip"
+
+            if inputs["mode"] == "Train":
+                train()
+            elif inputs["mode"] == "Predict":
+                predict()
+
 
             # TODO: 결과 출력
 
@@ -218,3 +224,11 @@ def save_uploaded_file(directory, file):
     with open(os.path.join(absolute_path, file.name), 'wb') as f:  # 해당 경로의 폴더에서 파일의 이름으로 생성하겠다.
         f.write(file.getbuffer())  # 해당 내용은 Buffer로 작성하겠다.
         return st.success('Uploaded a file: {}'.format(file.name))
+
+
+def train():
+    pass
+
+
+def predict():
+    pass
